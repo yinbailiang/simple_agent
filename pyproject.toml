@@ -1,0 +1,10 @@
+[project]
+name = "simple-agent"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "infinity-agent>=0.2.1",
+    "infinity-data[tool]>=3.3.0",
+]

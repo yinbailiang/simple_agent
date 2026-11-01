@@ -1,0 +1,14 @@
+# 密钥从环境变量导入（!env，进程环境快照；未设置则启动失败）:export DEEPSEEK_API_KEY=sk-...
+#env: DEEPSEEK_API_KEY "sk-xxxxxxxxxxxxxxxxxxxxxxxxxxx"
+!env import DEEPSEEK_API_KEY as ds_key
+
+Config {
+    # —— LLM ——
+    model = "deepseek-v4-flash"
+    api_key = $ds_key
+    base_url: url = "https://api.deepseek.com"
+
+    # —— 目录（p"..." 路径字面量:相对路径按本文件所在目录解析）——
+    workspace = p"."
+    log_dir = p"log"
+}
